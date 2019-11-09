@@ -5,8 +5,6 @@ import { Block, theme } from "galio-framework";
 import { Card, SearchForm } from "../components";
 const { width } = Dimensions.get("screen");
 
-import getARoom from "../services/rooms";
-
 class Home extends React.Component {
   renderArticles = () => {
     return (
