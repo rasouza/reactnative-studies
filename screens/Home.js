@@ -30,7 +30,7 @@ class Home extends React.Component {
   }
 
   render() {
-    console.log(getARoom(['coffee', 'tv'], 3));
+    console.log(getARoom(['coffee', 'tv'], 3))
     return (
       <Block flex center style={styles.home}>
         {this.renderArticles()}
