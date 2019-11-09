@@ -6,7 +6,9 @@ import { Card } from '../components';
 import articles from '../constants/articles';
 const { width } = Dimensions.get('screen');
 
-import { getRoomsByFacilities } from '../services/rooms';
+import getARoom from '../services/rooms';
+
+
 
 class Home extends React.Component {
   renderArticles = () => {
@@ -28,7 +30,7 @@ class Home extends React.Component {
   }
 
   render() {
-    console.log(getRoomsByFacilities(['coffee', 'tv']));
+    console.log(getARoom(['coffee', 'tv'], 3));
     return (
       <Block flex center style={styles.home}>
         {this.renderArticles()}
