@@ -6,6 +6,10 @@ import { Card } from '../components';
 import articles from '../constants/articles';
 const { width } = Dimensions.get('screen');
 
+import getARoom from '../services/rooms';
+
+
+
 class Home extends React.Component {
   renderArticles = () => {
     return (
