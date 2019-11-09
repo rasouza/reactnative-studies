@@ -1,52 +1,52 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { StyleSheet, Dimensions, ScrollView, Button, Text } from 'react-native';
-import { theme, Input, Radio } from 'galio-framework';
+import { theme, Input, Checkbox } from 'galio-framework';
 const { width } = Dimensions.get('screen');
-import { Formik } from 'formik';
 
 const SearchForm = ({ onSubmit, ...props }) => {
+  const [ guests, setGuests ] = useState(0);
+  const [ facilities, setFacilities ] = useState([]);
+
   const values = {
-    guests: 0,
-    facilities: []
+    guests: guests,
+    facilities: facilities
   };
 
   const facilities = ["whiteboard", "video", "postit", "coffee", "fridge", "tv", "projector"];
 
-  const handleSubmit = () => {
+  const handleSubmit = (guests, facilities) => {
+    setGuests(guests);
+
     if (onSubmit) {
       onSubmit(values);
     }
   };
 
   return (
-    <Formik
-      initialValues={{ guests: 0, facilities: [] }}
-      onSubmit={handleSubmit()}
-    >
       <ScrollView>
         <Input
           type="number-pad"
           label="Enter the number of guests for the room:"
           placeholder="Enter the number of guests for the room"
-          value={values.guests}
+          value={guests}
         />
+
         <Text>Choose the facilities you need:</Text>
 
         {facilities.map(item => (
-          <Radio
+          <Checkbox
+            key={item}
+            value={item}
             label={item}
             flexDirection="row"
-            radioOuterStyle={{display: 'none'}}
-            radioInnerStyle={{display: 'none'}}
-            containerStyle={styles.tagContainer}
+            checkboxStyle={styles.tagContainer}
             labelStyle={styles.facilitiesTag}
-            onChange={item => values.facilities.push(item)}
+            onChange={item => console.log(item) }
           />))
         }
 
         <Button onPress={handleSubmit} title="Get a room" />
       </ScrollView>
-    </Formik>
   );
 };
 
