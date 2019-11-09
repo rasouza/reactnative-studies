@@ -1,3 +1,0 @@
-{
-    "/facilities/:name": "/rooms?facilities_like=:name"
-}

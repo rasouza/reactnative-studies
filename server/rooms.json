@@ -1,0 +1,264 @@
+{
+  "rooms": [
+    {
+      "id": 1,
+      "name": "SAO-10-Air",
+      "floor": 10,
+      "capacity": 2,
+      "facilities": ["video", "tv"],
+      "calendar": "sumup.com_3133373931363333383234@resource.calendar.google.com"
+    },
+
+    {
+      "id": 2,
+      "name": "SAO-10-Mais",
+      "floor": 10,
+      "capacity": 5,
+      "facilities": ["coffee", "fridge", "postit"],
+      "calendar": "sumup.com_3630313938353532373135@resource.calendar.google.com"
+    },
+
+    {
+      "id": 3,
+      "name": "SAO-10-Singapura",
+      "floor": 10,
+      "capacity": 2,
+      "facilities": ["video", "tv"],
+      "calendar": "sumup.com_2d38333834313836323138@resource.calendar.google.com"
+    },
+
+    {
+      "id": 4,
+      "name": "SAO-10-Super",
+      "floor": 10,
+      "capacity": 3,
+      "facilities": ["video", "postit", "tv"],
+      "calendar": "sumup.com_2d32363038323039313939@resource.calendar.google.com"
+    },
+
+    {
+      "id": 5,
+      "name": "SAO-10-Townhall",
+      "floor": 10,
+      "capacity": 200,
+      "facilities": ["video", "projector", "tv"],
+      "calendar": "sumup.com_3132393936363531353834@resource.calendar.google.com"
+    },
+
+    {
+      "id": 6,
+      "name": "SAO-11-Estaiada",
+      "floor": 11,
+      "capacity": 2,
+      "facilities": ["video", "tv"],
+      "calendar": "sumup.com_3335303137323538393432@resource.calendar.google.com"
+    },
+
+    {
+      "id": 7,
+      "name": "SAO-11-Ipanema",
+      "floor": 11,
+      "capacity": 8,
+      "facilities": ["video", "coffee", "tv", "whiteboard", "postit"],
+      "calendar": "sumup.com_3439373637343037323935@resource.calendar.google.com"
+    },
+
+    {
+      "id": 8,
+      "name": "SAO-11-Masp",
+      "floor": 11,
+      "capacity": 36,
+      "facilities": ["video", "fridge", "projector", "whiteboard"],
+      "calendar": "sumup.com_2d35373135363232383039@resource.calendar.google.com"
+    },
+
+    {
+      "id": 9,
+      "name": "SAO-5-Beetlejuice",
+      "floor": 5,
+      "capacity": 2,
+      "facilities": ["video", "tv", "postit"],
+      "calendar": "sumup.com_3935373530323232353331@resource.calendar.google.com"
+    },
+
+    {
+      "id": 10,
+      "name": "SAO-5-Fab Five",
+      "floor": 5,
+      "capacity": 8,
+      "facilities": ["video", "tv", "postit", "whiteboard"],
+      "calendar": "sumup.com_3231343738393537393330@resource.calendar.google.com"
+    },
+
+    {
+      "id": 11,
+      "name": "SAO-5-Korra",
+      "floor": 5,
+      "capacity": 2,
+      "facilities": [],
+      "calendar": "sumup.com_363536333731343837@resource.calendar.google.com"
+    },
+
+    {
+      "id": 12,
+      "name": "SAO-5-Luke Cage",
+      "floor": 5,
+      "capacity": 20,
+      "facilities": ["video", "tv"],
+      "calendar": "sumup.com_343133343630313434@resource.calendar.google.com"
+    },
+
+    {
+      "id": 13,
+      "name": "SAO-5-Mulher Maravilha",
+      "floor": 5,
+      "capacity": 10,
+      "facilities": ["video", "tv", "coffee", "whiteboard", "postit", "fridge"],
+      "calendar": "sumup.com_33363530323237333331@resource.calendar.google.com"
+    },
+
+    {
+      "id": 14,
+      "name": "SAO-6-Copa-Chapadão",
+      "floor": 6,
+      "capacity": 50,
+      "facilities": ["video", "tv", "projector"],
+      "calendar": "sumup.com_36313536353932363933@resource.calendar.google.com"
+    },
+
+    {
+      "id": 15,
+      "name": "SAO-6-Early Night",
+      "floor": 6,
+      "capacity": 4,
+      "facilities": ["video", "tv", "whiteboard", "postit"],
+      "calendar": "sumup.com_36333037323337343432@resource.calendar.google.com"
+    },
+
+    {
+      "id": 16,
+      "name": "SAO-6-Informal-Brain Over Muscle",
+      "floor": 6,
+      "capacity": 15,
+      "facilities": ["coffee", "whiteboard", "fridge", "postit"],
+      "calendar": "sumup.com_3434373737353133363437@resource.calendar.google.com"
+    },
+
+    {
+      "id": 17,
+      "name": "SAO-6-Live Studio-OKRs",
+      "floor": 6,
+      "capacity": 2,
+      "facilities": [],
+      "calendar": "sumup.com_3236363731323832333733@resource.calendar.google.com"
+    },
+
+    {
+      "id": 18,
+      "name": "SAO-6-People Care",
+      "floor": 6,
+      "capacity": 2,
+      "facilities": ["video", "tv", "whiteboard", "postit"],
+      "calendar": "sumup.com_3635393935303635363030@resource.calendar.google.com"
+    },
+
+    {
+      "id": 19,
+      "name": "SAO-6-Product Love",
+      "floor": 6,
+      "capacity": 10,
+      "facilities": ["video", "tv", "coffee", "whiteboard", "postit", "fridge"],
+      "calendar": "sumup.com_3139313136353038333939@resource.calendar.google.com"
+    },
+
+    {
+      "id": 20,
+      "name": "SAO-8-Áustria",
+      "floor": 8,
+      "capacity": 2,
+      "facilities": ["video", "tv", "postit"],
+      "calendar": "sumup.com_35373435353134333433@resource.calendar.google.com"
+    },
+
+    {
+      "id": 21,
+      "name": "SAO-8-Canadá",
+      "floor": 8,
+      "capacity": 2,
+      "facilities": ["video", "tv", "postit"],
+      "calendar": "sumup.com_3635323531303035323334@resource.calendar.google.com"
+    },
+
+    {
+      "id": 22,
+      "name": "SAO-8-Dinamarca",
+      "floor": 8,
+      "capacity": 2,
+      "facilities": [],
+      "calendar": "sumup.com_3235373238333639343739@resource.calendar.google.com"
+    },
+
+    {
+      "id": 23,
+      "name": "SAO-8-Espanha",
+      "floor": 8,
+      "capacity": 4,
+      "facilities": ["video", "tv", "whiteboard", "postit"],
+      "calendar": "sumup.com_3539343534333437343435@resource.calendar.google.com"
+    },
+
+    {
+      "id": 24,
+      "name": "SAO-8-Estônia",
+      "floor": 8,
+      "capacity": 4,
+      "facilities": ["video", "tv", "whiteboard", "postit"],
+      "calendar": "sumup.com_3534363337333533393236@resource.calendar.google.com"
+    },
+
+    {
+      "id": 25,
+      "name": "SAO-8-Finlândia",
+      "floor": 8,
+      "capacity": 2,
+      "facilities": ["video", "tv"],
+      "calendar": "sumup.com_35333937303438343237@resource.calendar.google.com"
+    },
+
+    {
+      "id": 26,
+      "name": "SAO-8-Grécia 2",
+      "floor": 8,
+      "capacity": 1,
+      "facilities": [],
+      "calendar": "sumup.com_3735373730383831383735@resource.calendar.google.com"
+    },
+
+    {
+      "id": 27,
+      "name": "SAO-8-Grécia 3",
+      "floor": 8,
+      "capacity": 1,
+      "facilities": [],
+      "calendar": "sumup.com_3834323536333738353930@resource.calendar.google.com"
+    },
+
+    {
+      "id": 28,
+      "name": "SAO-8-Grécia 4",
+      "floor": 8,
+      "capacity": 1,
+      "facilities": [],
+      "calendar": "sumup.com_3134353430333233333534@resource.calendar.google.com"
+    },
+
+    {
+      "id": 29,
+      "name": "SAO-8-Grécia 5",
+      "floor": 8,
+      "capacity": 1,
+      "facilities": [],
+      "calendar": "sumup.com_3535323433343437313736@resource.calendar.google.com"
+    }
+  ]
+}
