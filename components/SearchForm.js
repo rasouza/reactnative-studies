@@ -1,7 +1,8 @@
 import React, { useState } from "react";
-import { StyleSheet, Dimensions, ScrollView, Text } from "react-native";
-import { theme, Input, Checkbox, Block } from "galio-framework";
+import { StyleSheet, Dimensions, ScrollView } from "react-native";
+import { theme, Checkbox, Block, Text } from "galio-framework";
 import Button from './Button';
+import Input from './Input';
 const { width } = Dimensions.get("screen");
 
 const initial_facilities = [
@@ -33,15 +34,15 @@ const SearchForm = ({ onSubmit, ...props }) => {
 
   return (
     <Block>
+      <Text h5>Guests:</Text>
       <Input
+        right
         type="number-pad"
-        label="Enter the number of guests for the room:"
         placeholder="Enter the number of guests for the room"
         onChangeText={value => setGuests(value)}
       />
 
-      <Text>Choose the facilities you need:</Text>
-
+      <Text h5>Facilities:</Text>
       {initial_facilities.map(item => (
         <Checkbox
           key={item}
@@ -50,7 +51,6 @@ const SearchForm = ({ onSubmit, ...props }) => {
           onChange={checked => toggleFacility(item, checked)}
         />
       ))}
-
       {/* <Button
         onPress={() => handleSubmit(guests, facilities)}
         title="Get a room"
