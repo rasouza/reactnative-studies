@@ -1,8 +1,9 @@
-import React, { useState } from "react";
+import React, { useState, useCallback } from "react";
 import { StyleSheet, Dimensions, View, Image } from "react-native";
-import { theme, Checkbox, Block, Text, Input } from "galio-framework";
+import { theme, Block, Text, Input } from "galio-framework";
 import { Icons } from '../constants/';
 import Button from './Button';
+import Selector from './Selector';
 const { width } = Dimensions.get("screen");
 
 
@@ -25,13 +26,12 @@ const SearchForm = ({ onSubmit, ...props }) => {
     navigation.navigate("Rooms", { guests, facilities });
   };
 
-  const toggleFacility = (item, checked) => {
-    if (checked) {
-      return setFacilities([...facilities, item]);
-    }
-
-    return setFacilities(facilities.filter(facility => facility !== item));
-  };
+  const toggleFacility = useCallback(facility => () => {
+    setFacilities(prev => {
+      const active = prev.includes(facility);
+      return active ? prev.filter(p => p !== facility) : [...prev, facility];
+    });
+  });
 
   return (
     <Block style={styles.home}>
@@ -49,19 +49,22 @@ const SearchForm = ({ onSubmit, ...props }) => {
 
       <Text h5 style={{marginTop: 20}}>Facilities:</Text>
 
-      <Block row style={styles.block}>
+      <Block center row style={styles.block}>
+
         {initial_facilities.map(item => (
-          <View 
-            key={item.toLowerCase()}
-            style={styles.checkboxContainer}
-          >
-            <Checkbox
+          <View key={item.toLowerCase()}>
+            <Selector
               key={item.toLowerCase()}
-              value={item}
-              label={item.toUpperCase()}
-              checkboxStyle={styles.checkboxLabel}
-              onChange={checked => toggleFacility(item, checked)}
-            />
+              active={facilities.includes(item)}
+              onChange={toggleFacility(item)}
+            >
+              <Image
+                source={Icons[`${item}Purple`]}
+                style={styles.selectorImage}
+                resizeMode="contain"
+              />
+            </Selector>
+            <Text center>{item}</Text>
           </View>
         ))}
       </Block>
@@ -80,22 +83,20 @@ const SearchForm = ({ onSubmit, ...props }) => {
   );
 };
 
+const ICON_SIZE = 50;
+
 const styles = StyleSheet.create({
   home: {
     padding: 5,
-    paddingTop: 20
+    paddingTop: 15
   },
   block: {
     marginTop: 20,
     flexWrap: 'wrap'
   },
-  checkboxContainer: {
-    paddingLeft: 5,
-    margin: theme.SIZES.BASE/4,
-    width: width/2.5
-  },
-  checkboxLabel: {
-    color: '#FFF'
+  selectorImage: {
+    width: ICON_SIZE,
+    height: ICON_SIZE
   },
   ctaButton: {
     marginTop: 20,
