@@ -42,10 +42,16 @@ class Card extends React.Component {
       <Block row={horizontal} card flex style={cardContainer}>
         <TouchableWithoutFeedback onPress={() => book(item, room, navigation)}>
           <Block flex style={imgContainer}>
-            <Image source={{ uri: "https://officesnapshots.com/wp-content/uploads/2019/01/sum-up-offices-sao-paulo-18-700x467.jpg" }} style={imageStyles} />
+            <Image
+              source={{
+                uri:
+                  "https://officesnapshots.com/wp-content/uploads/2019/01/sum-up-offices-sao-paulo-18-700x467.jpg"
+              }}
+              style={imageStyles}
+            />
           </Block>
         </TouchableWithoutFeedback>
-        <TouchableWithoutFeedback onPress={() => book(item, room,navigation )}>
+        <TouchableWithoutFeedback onPress={() => book(item, room, navigation)}>
           <Block flex space="between" style={styles.cardDescription}>
             <Text bold size={18} style={styles.cardTitle}>
               {item.start}
@@ -55,7 +61,7 @@ class Card extends React.Component {
             </Text>
           </Block>
         </TouchableWithoutFeedback>
-        <TouchableWithoutFeedback onPress={() => book(item, room)}>
+        <TouchableWithoutFeedback onPress={() => book(item, room, navigation)}>
           <Block flex space="between" style={styles.cardDescription}>
             <Text size={14} style={styles.cardTitle}>
               {room.name}

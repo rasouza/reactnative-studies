@@ -1,9 +1,7 @@
 import React, { useState } from "react";
 import { StyleSheet, Dimensions, ScrollView } from "react-native";
-import { theme, Checkbox, Block, Text } from "galio-framework";
-import Button from './Button';
-import Input from './Input';
-const { width } = Dimensions.get("screen");
+import { Checkbox, Block, Button, Text, theme } from "galio-framework";
+import Input from "./Input";
 
 const initial_facilities = [
   "whiteboard",
@@ -61,5 +59,20 @@ const SearchForm = ({ onSubmit, ...props }) => {
     </Block>
   );
 };
+const styles = StyleSheet.create({
+  shadow: {
+    shadowColor: "black",
+    shadowOffset: { width: 0, height: 2 },
+    shadowRadius: 4,
+    shadowOpacity: 0.2,
+    elevation: 2
+  },
+  social: {
+    width: theme.SIZES.BASE * 3.5,
+    height: theme.SIZES.BASE * 3.5,
+    borderRadius: theme.SIZES.BASE * 1.75,
+    justifyContent: "center"
+  }
+});
 
 export default SearchForm;

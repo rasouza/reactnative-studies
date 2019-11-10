@@ -57,6 +57,6 @@ export const book = (item, room, navigation) => {
   console.log(JSON.stringify(data));
 
   return axios(options)
-    .then(() => navigation.navigate('Home',{flash: true}))
+    .then(() => navigation.navigate("Home", { flash: true }))
     .catch(error => console.log(error));
 };
