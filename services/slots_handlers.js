@@ -36,8 +36,8 @@ export function create_start(now) {
     } else {
         now_minute = 0
         now_hour++
-        if(new_hour > 23) {
-            new_hour = 0
+        if(now_hour > 23) {
+            now_hour = 0
         }
     }
     return (now_hour * 100) + now_minute
