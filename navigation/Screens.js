@@ -113,7 +113,8 @@ const HomeStack = createStackNavigator(
     Home: {
       screen: Home,
       navigationOptions: ({ navigation }) => ({
-        header: <Header title="Home" navigation={navigation} />
+        // header: <Header search options title="Home" navigation={navigation} />
+        headerTransparent: true
       })
     },
     Pro: {
@@ -162,8 +163,9 @@ const AppStack = createDrawerNavigator(
         )
       })
     }
-  },
-  Menu
+  }
+  // ,
+  // Menu
 );
 
 const AppContainer = createAppContainer(AppStack);

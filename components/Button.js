@@ -7,12 +7,13 @@ import argonTheme from "../constants/Theme";
 
 class ArButton extends React.Component {
   render() {
-    const { small, shadowless, children, color, style, ...props } = this.props;
+    const { small, regularSize, shadowless, children, color, style, ...props } = this.props;
     
     const colorStyle = color && argonTheme.COLORS[color.toUpperCase()];
 
     const buttonStyles = [
       small && styles.smallButton,
+      regularSize && styles.regularSize,
       color && { backgroundColor: colorStyle },
       !shadowless && styles.shadow,
       {...style}
@@ -33,6 +34,7 @@ class ArButton extends React.Component {
 
 ArButton.propTypes = {
   small: PropTypes.bool,
+  regularSize: PropTypes.bool,
   shadowless: PropTypes.bool,
   color: PropTypes.oneOfType([
     PropTypes.string,
@@ -44,6 +46,10 @@ const styles = StyleSheet.create({
   smallButton: {
     width: 75,
     height: 28
+  },
+  regularSize: {
+    width: 185,
+    height: 35
   },
   shadow: {
     shadowColor: 'black',

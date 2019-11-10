@@ -24,6 +24,9 @@ class Home extends React.Component {
           showsVerticalScrollIndicator={false}
           contentContainerStyle={styles.articles}
         >
+          {/* <Block>
+            <Text />
+          </Block> */}
           <Block flex>
             <SearchForm navigation={navigation} />
           </Block>
