@@ -16,7 +16,7 @@ const filterByGuests = (number) => {
 
 const sortByGuest = () => (rooms => (sortBy(room => (room.guests), rooms)))
 
-export default getARoom = (facilities, guests) => (
+export const getARoom = (facilities, guests) => (
     compose(
         sortByGuest(),
         filterByGuests(guests),
@@ -24,4 +24,5 @@ export default getARoom = (facilities, guests) => (
     )(rooms)
 );
 
+export const findByCalendar = calendar => filter(room => room.calendar == calendar, rooms)[0]
 

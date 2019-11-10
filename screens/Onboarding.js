@@ -41,7 +41,7 @@ class Onboarding extends React.Component {
                 <Button
                   style={styles.button}
                   color={argonTheme.COLORS.SECONDARY}
-                  onPress={() => navigation.navigate("Home")}
+                  onPress={() => navigation.navigate("Rooms")}
                   textStyle={{ color: argonTheme.COLORS.BLACK }}
                 >
                   Get Started
