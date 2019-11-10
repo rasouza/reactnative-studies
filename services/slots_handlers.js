@@ -3,7 +3,8 @@ const utils = require('./utils');
 const joda = require("@js-joda/core")
 
 export default get_free_slots = (calendars) => {
-    const start = parseInt(utils.to_hour(joda.ZonedDateTime.now(joda.ZoneId.of("UTC-03:00")).toString()))
+    const now = parseInt(utils.to_hour(joda.ZonedDateTime.now(joda.ZoneId.of("UTC-03:00")).toString()))
+    const start = create_start(now)
     const end = 2359
     const free_slots = []
     calendars.forEach((cal) => {
@@ -18,9 +19,28 @@ export default get_free_slots = (calendars) => {
                 start: utils.to_datetime(slot.start),
                 end: utils.to_datetime(slot.end)
             }
-        }))
+        }).slice(0, 3))
     })
     return lodash.flatten(free_slots)
+}
+
+export function create_start(now) {
+    let now_hour = Math.floor(now / 100)
+    let now_minute = now % 100
+    if (now_minute > 0 && now_minute < 15) {
+        now_minute = 15
+    } else if (now_minute > 15 && now_minute < 30) {
+        now_minute = 30
+    } else if (now_minute > 30 && now_minute < 45) {
+        now_minute = 45
+    } else {
+        now_minute = 0
+        now_hour++
+        if(new_hour > 23) {
+            new_hour = 0
+        }
+    }
+    return (now_hour * 100) + now_minute
 }
 
 export function normalize_calendar(calendar) {
