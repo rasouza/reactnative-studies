@@ -6,6 +6,8 @@ import { Block, Text, theme } from 'galio-framework';
 
 import { argonTheme } from '../constants';
 
+import { findByCalendar } from '../services/rooms';
+
 
 class Card extends React.Component {
   render() {
@@ -21,17 +23,29 @@ class Card extends React.Component {
       styles.shadow
     ];
 
+    const room = findByCalendar(item.room)
+    console.log(item)
+
     return (
       <Block row={horizontal} card flex style={cardContainer}>
-        <TouchableWithoutFeedback onPress={() => navigation.navigate('Pro')}>
+        <TouchableWithoutFeedback onPress={() => console.log(room)}>
           <Block flex style={imgContainer}>
-            <Image source={{uri: item.image}} style={imageStyles} />
+            <Image source={{ uri: item.image }} style={imageStyles} />
           </Block>
         </TouchableWithoutFeedback>
-        <TouchableWithoutFeedback onPress={() => navigation.navigate('Pro')}>
+        <TouchableWithoutFeedback onPress={() => console.log(room)}>
           <Block flex space="between" style={styles.cardDescription}>
-            <Text size={14} style={styles.cardTitle}>{item.title}</Text>
-            <Text size={12} muted={!ctaColor} color={ctaColor || argonTheme.COLORS.ACTIVE} bold>{item.cta}</Text>
+            <Text size={14} style={styles.cardTitle}>
+              {item.start}:{item.end}
+            </Text>
+            <Text
+              size={12}
+              muted={!ctaColor}
+              color={ctaColor || argonTheme.COLORS.ACTIVE}
+              bold
+            >
+              {item.cta}
+            </Text>
           </Block>
         </TouchableWithoutFeedback>
       </Block>
