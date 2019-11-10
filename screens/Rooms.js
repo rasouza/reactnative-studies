@@ -54,6 +54,8 @@ class Rooms extends React.Component {
     getFreeSlots(facilities, guests).then(slots => this.setState({ slots: formatSlots(slots) }));
   }
   renderSlots = () => {
+    const { navigation } = this.props;
+
     return (
       <Block>
         <ScrollView
@@ -62,7 +64,7 @@ class Rooms extends React.Component {
         >
           <Block flex>
             {this.state.slots.map(slot => (
-              <Card key={`${slot.room}${slot.start}`} item={slot} horizontal />
+              <Card key={`${slot.room}${slot.start}`} item={slot} horizontal navigation={navigation}/>
             ))}
           </Block>
         </ScrollView>

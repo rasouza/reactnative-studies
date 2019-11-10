@@ -40,12 +40,12 @@ class Card extends React.Component {
 
     return (
       <Block row={horizontal} card flex style={cardContainer}>
-        <TouchableWithoutFeedback onPress={() => book(item, room)}>
+        <TouchableWithoutFeedback onPress={() => book(item, room, navigation)}>
           <Block flex style={imgContainer}>
             <Image source={{ uri: item.image }} style={imageStyles} />
           </Block>
         </TouchableWithoutFeedback>
-        <TouchableWithoutFeedback onPress={() => book(item, room)}>
+        <TouchableWithoutFeedback onPress={() => book(item, room,navigation )}>
           <Block flex space="between" style={styles.cardDescription}>
             <Text bold size={14} style={styles.cardTitle}>
               {item.start} - {item.end}

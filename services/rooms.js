@@ -28,7 +28,7 @@ export const getARoom = (facilities, guests) =>
 export const findByCalendar = calendar =>
   filter(room => room.calendar == calendar, rooms)[0];
 
-export const book = (item, room) => {
+export const book = (item, room, navigation) => {
   const accessToken = getAccessToken();
   const url = `https://www.googleapis.com/calendar/v3/calendars/${getCalendarId()}/events`;
   const data = {
@@ -57,6 +57,6 @@ export const book = (item, room) => {
   console.log(JSON.stringify(data));
 
   return axios(options)
-    .then(response => console.log(response))
+    .then(() => navigation.navigate('Home',{flash: true}))
     .catch(error => console.log(error));
 };
