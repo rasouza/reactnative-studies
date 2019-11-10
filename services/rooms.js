@@ -4,10 +4,11 @@ import axios from "axios";
 import { getAccessToken, getCalendarId } from "./oauth.js";
 
 const filterByFacilities = facilities => {
+  const lowerFacilities = facilities.map(item => item.toLowerCase());
   return rooms =>
     filter(
       room =>
-        intersection(room.facilities, facilities).length == facilities.length,
+        intersection(room.facilities, lowerFacilities).length == lowerFacilities.length,
       rooms
     );
 };

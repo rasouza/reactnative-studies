@@ -8,13 +8,13 @@ const { width } = Dimensions.get("screen");
 
 
 const initial_facilities = [
-  "whiteboard",
-  "video",
-  "postIt",
-  "coffee",
-  "fridge",
-  "tv",
-  "projector"
+  "Whiteboard",
+  "Video",
+  "PostIt",
+  "Coffee",
+  "Fridge",
+  "Tv",
+  "Projector"
 ];
 
 const SearchForm = ({ onSubmit, ...props }) => {

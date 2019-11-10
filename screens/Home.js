@@ -37,7 +37,7 @@ class Home extends React.Component {
         <Toast
           isShow={showToast}
           fadeOutDuration={300}
-          positionIndicator="center"
+          positionIndicator="bottom"
           color="success"
         >
           Room booked successfully
