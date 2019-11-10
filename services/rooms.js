@@ -28,9 +28,10 @@ export const getARoom = (facilities, guests) =>
 export const findByCalendar = calendar =>
   filter(room => room.calendar == calendar, rooms)[0];
 
-export const book = (item, room, navigation) => {
-  const accessToken = getAccessToken();
-  const url = `https://www.googleapis.com/calendar/v3/calendars/${getCalendarId()}/events`;
+export const book = async (item, room, navigation) => {
+  const accessToken = await getAccessToken();
+  const calendarId = await getCalendarId();
+  const url = `https://www.googleapis.com/calendar/v3/calendars/${calendarId}/events`;
   const data = {
     end: {
       dateTime: item.endDateTime,

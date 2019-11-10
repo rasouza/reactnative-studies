@@ -1,4 +1,5 @@
 import * as Google from "expo-google-app-auth";
+import { AsyncStorage } from "react-native";
 
 export const SignInWithGoogleAsync = async () => {
   try {
@@ -7,11 +8,14 @@ export const SignInWithGoogleAsync = async () => {
         "248128904879-d4bi1b7mc02nm6j2o5kqshq8e2nbiv96.apps.googleusercontent.com",
       iosClientId:
         "248128904879-6477474rddp7nsvk3qfquvmks80295sa.apps.googleusercontent.com",
-      scopes: ["profile", "email"]
+      scopes: ["profile", "email", "https://www.googleapis.com/auth/calendar"]
     });
 
     if (result.type === "success") {
       console.log(result.accessToken);
+      await AsyncStorage.setItem("@RoomBooker:accessToken", result.accessToken);
+      await AsyncStorage.setItem("@RoomBooker:refreshToken", result.refreshToken);
+      await AsyncStorage.setItem("@RoomBooker:calendarId", result.user.email);
       return result.accessToken;
     } else {
       return { cancelled: true };
@@ -21,7 +25,12 @@ export const SignInWithGoogleAsync = async () => {
   }
 };
 
-export const getAccessToken = () =>
-  "ya29.ImWwBx6kC8WRu-C0KHC2sOlimZMxuAB1H8WacnDsgcbOrz8y1lkcErbDQmZmjOmOuxc41aM8tlFnEsdUGMvSp6QGDuIcaXvVPqrAeSQMU-AxR3dToOVCzg3oKcppzGBY0ySP3-jSYw";
+export const getAccessToken = async () => { 
+  const value = await AsyncStorage.getItem("@RoomBooker:accessToken");
+  return value;
+}
 
-export const getCalendarId = () => "danilo.lima@sumup.com";
+export const getCalendarId = async () =>{ 
+  await console.log(AsyncStorage.getItem("@RoomBooker:calendarId"));
+  return await AsyncStorage.getItem("@RoomBooker:calendarId")
+}
