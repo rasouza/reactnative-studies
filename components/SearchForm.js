@@ -1,6 +1,7 @@
 import React, { useState } from "react";
-import { StyleSheet, Dimensions, ScrollView, Button, Text } from "react-native";
-import { theme, Input, Checkbox } from "galio-framework";
+import { StyleSheet, Dimensions, ScrollView, Text } from "react-native";
+import { theme, Input, Checkbox, Block } from "galio-framework";
+import Button from './Button';
 const { width } = Dimensions.get("screen");
 
 const initial_facilities = [
@@ -31,7 +32,7 @@ const SearchForm = ({ onSubmit, ...props }) => {
   };
 
   return (
-    <ScrollView>
+    <Block>
       <Input
         type="number-pad"
         label="Enter the number of guests for the room:"
@@ -50,11 +51,14 @@ const SearchForm = ({ onSubmit, ...props }) => {
         />
       ))}
 
-      <Button
+      {/* <Button
         onPress={() => handleSubmit(guests, facilities)}
         title="Get a room"
-      />
-    </ScrollView>
+      /> */}
+      <Button color="primary" onPress={() => handleSubmit(guests, facilities)}>
+        GET A ROOM!
+      </Button>
+    </Block>
   );
 };
 
