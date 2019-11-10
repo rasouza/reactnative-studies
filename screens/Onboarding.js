@@ -21,32 +21,31 @@ class Onboarding extends React.Component {
       <Block flex style={styles.container}>
         <StatusBar hidden />
         <Block flex center>
-        <ImageBackground
+          <ImageBackground
             source={Images.Onboarding}
             style={{ height, width, zIndex: 1 }}
           />
         </Block>
-        <Block center>
-        </Block>
+        <Block center></Block>
         <Block flex space="between" style={styles.padded}>
-            <Block flex space="around" style={{ zIndex: 2 }}>
-              <Block style={styles.title}>
-                <Block>
-                  <Text color="white" center size={60}>
-                    Get a Room
-                  </Text>
-                </Block>
+          <Block flex space="around" style={{ zIndex: 2 }}>
+            <Block style={styles.title}>
+              <Block>
+                <Text color="white" center size={60}>
+                  Get a Room
+                </Text>
               </Block>
-              <Block center>
-                <Button
-                  style={styles.button}
-                  color={argonTheme.COLORS.SECONDARY}
-                  onPress={() => navigation.navigate("Home")}
-                  textStyle={{ color: argonTheme.COLORS.BLACK }}
-                >
-                  Get Started
-                </Button>
-              </Block>
+            </Block>
+            <Block center>
+              <Button
+                style={styles.button}
+                color={argonTheme.COLORS.SECONDARY}
+                onPress={() => navigation.navigate("Home")}
+                textStyle={{ color: argonTheme.COLORS.BLACK }}
+              >
+                Get Started
+              </Button>
+            </Block>
           </Block>
         </Block>
       </Block>
@@ -62,7 +61,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: theme.SIZES.BASE * 2,
     position: "relative",
     bottom: theme.SIZES.BASE,
-    zIndex: 2,
+    zIndex: 2
   },
   button: {
     width: width - theme.SIZES.BASE * 4,
@@ -74,11 +73,11 @@ const styles = StyleSheet.create({
     width: 200,
     height: 60,
     zIndex: 2,
-    position: 'relative',
-    marginTop: '-50%'
+    position: "relative",
+    marginTop: "-50%"
   },
   title: {
-    marginTop:'-5%'
+    marginTop: "-5%"
   },
   subTitle: {
     marginTop: 20

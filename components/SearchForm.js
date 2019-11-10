@@ -1,6 +1,15 @@
 import React, { useState } from "react";
-import { StyleSheet, Dimensions, ScrollView, Button, Text } from "react-native";
+import {
+  StyleSheet,
+  Dimensions,
+  ScrollView,
+  Button,
+  Text,
+  Image
+} from "react-native";
 import { theme, Input, Checkbox } from "galio-framework";
+import { TouchableWithoutFeedback } from "react-native-gesture-handler";
+
 const { width } = Dimensions.get("screen");
 
 const initial_facilities = [
