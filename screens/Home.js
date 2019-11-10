@@ -54,8 +54,9 @@ const styles = StyleSheet.create({
   topBar: {
     width: width,
     padding: 10,
-    paddingTop: 40,
-    maxHeight: 80,
+    paddingTop: 35,
+    paddingBottom: 20,
+    maxHeight: 85,
     backgroundColor: '#562E70'
   }, 
   topText: {
