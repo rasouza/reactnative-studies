@@ -8,7 +8,8 @@ import { Card } from "../components";
 const { width } = Dimensions.get("screen");
 
 import { findByCalendar } from "../services/rooms";
-import slots from "../constants/slots";
+
+import getFreeSlots from "../services/slots";
 
 const formatOptions = {
   hour: "2-digit",
@@ -26,22 +27,33 @@ const formatDateTime = dateTime =>
       return accumulator;
     }, []);
 
-const formatedSlots = slots.map(slot => {
-  const start = formatDateTime(slot.start);
-  const end = formatDateTime(slot.end);
+const formatSlots = slots =>
+  slots.map(slot => {
+    const start = formatDateTime(slot.start);
+    const end = formatDateTime(slot.end);
 
-  slot.startDateTime = slot.start;
-  slot.endDateTime = slot.end;
+    slot.startDateTime = slot.start;
+    slot.endDateTime = slot.end;
 
-  slot.start = `${start.hour}:${start.minute}`;
-  slot.end = `${end.hour}:${end.minute}`;
+    slot.start = `${start.hour}:${start.minute}`;
+    slot.end = `${end.hour}:${end.minute}`;
 
-  return slot;
-});
+    return slot;
+  });
 
 class Rooms extends React.Component {
+  state = {
+    slots: []
+  };
+
+  componentDidMount() {
+    getFreeSlots(["coffee", "tv"], 5).then(slots =>
+      this.setState({ slots: formatSlots(slots) })
+    );
+  }
   renderSlots = () => {
     const { navigation } = this.props;
+
     return (
       <Block>
         <ScrollView
@@ -49,7 +61,7 @@ class Rooms extends React.Component {
           contentContainerStyle={styles.articles}
         >
           <Block flex>
-            {formatedSlots.map(slot => (
+            {this.state.slots.map(slot => (
               <Card key={slot.room} item={slot} horizontal />
             ))}
           </Block>
