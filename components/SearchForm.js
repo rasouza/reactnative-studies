@@ -1,20 +1,13 @@
 import React, { useState } from "react";
-// import { StyleSheet, Dimensions, ScrollView } from "react-native";
-// import { Checkbox, Block, Button, Text, theme } from "galio-framework";
-// import Input from "./Input";
 import { StyleSheet, Dimensions, View, Image } from "react-native";
-import { theme, Checkbox, Block, Text } from "galio-framework";
+import { theme, Checkbox, Block, Text, Input } from "galio-framework";
 import { Icons } from '../constants/';
 import Button from './Button';
-import Input from './Input';
-// import { StyleSheet, Dimensions, View, ScrollView, Button, Text } from "react-native";
-// import { theme, Input, Checkbox } from "galio-framework";
-// import ViewShot from "react-native-view-shot";
 const { width } = Dimensions.get("screen");
 
 
 const initial_facilities = [
-  // "Whiteboard",
+  "Whiteboard",
   "Video",
   "PostIt",
   "Coffee",
@@ -41,32 +34,34 @@ const SearchForm = ({ onSubmit, ...props }) => {
   };
 
   return (
-    <Block center style={styles.home}>
+    <Block style={styles.home}>
       <Text h5>Guests:</Text>
       <Input
         right
+        rounded
+        color="#562E70"
         type="number-pad"
+        borderColor="#562E70"
+        placeholderTextColor="#562E70"
         placeholder="Enter the number of guests for the room"
         onChangeText={value => setGuests(value)}
       />
 
-      <Text h5>Facilities:</Text>
-      {initial_facilities.map(item => (
-        <View 
-          // style={styles.checkboxContainer}
-          // style={{backgroundImage: 'url(`${CoffeePurple}`)', padding: 10}}
-        >
-          <Checkbox
-            key={item.toLocaleLowerCase()}
-            value={item}
-            label={item.toUpperCase()}
-            checkboxStyle={styles.checkboxLabel}
-            onChange={checked => toggleFacility(item, checked)}
-          />
-          {/* <Image source={Icons[`${item}Purple`]}
-            style={{ width: 20, height: 20, marginBottom: 20 }}/> */}
-        </View>
-      ))}
+      <Text h5 style={{marginTop: 20}}>Facilities:</Text>
+
+      <Block row style={styles.block}>
+        {initial_facilities.map(item => (
+          <View style={styles.checkboxContainer}>
+            <Checkbox
+              key={item.toLocaleLowerCase()}
+              value={item}
+              label={item.toUpperCase()}
+              checkboxStyle={styles.checkboxLabel}
+              onChange={checked => toggleFacility(item, checked)}
+            />
+          </View>
+        ))}
+      </Block>
 
       <Button
         regularSize
@@ -78,33 +73,19 @@ const SearchForm = ({ onSubmit, ...props }) => {
     </Block>
   );
 };
-// const styles = StyleSheet.create({
-//   shadow: {
-//     shadowColor: "black",
-//     shadowOffset: { width: 0, height: 2 },
-//     shadowRadius: 4,
-//     shadowOpacity: 0.2,
-//     elevation: 2
-//   },
-//   social: {
-//     width: theme.SIZES.BASE * 3.5,
-//     height: theme.SIZES.BASE * 3.5,
-//     borderRadius: theme.SIZES.BASE * 1.75,
-//     justifyContent: "center"
-//   }
-// });
 
 const styles = StyleSheet.create({
   home: {
-    // width: width,
     padding: 8,
     paddingTop: 20
   },
+  block: {
+    marginTop: 20,
+    flexWrap: 'wrap'
+  },
   checkboxContainer: {
     margin: theme.SIZES.BASE/4,
-    width: 'auto',
-    // padding:theme.SIZES.BASE/2,
-    // backgroundColor: '#DDD'
+    width: width/3
   },
   checkboxLabel: {
     color: '#FFF'
