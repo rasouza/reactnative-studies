@@ -47,11 +47,13 @@ class Rooms extends React.Component {
   };
 
   componentDidMount() {
-    getFreeSlots(["coffee", "tv"], 5).then(slots => this.setState({ slots: formatSlots(slots) }));
+    const { navigation } = this.props;
+    const facilities = navigation.getParam('facilities', [])
+    const guests = navigation.getParam('guests', 99)
+
+    getFreeSlots(facilities, guests).then(slots => this.setState({ slots: formatSlots(slots) }));
   }
   renderSlots = () => {
-    const { navigation } = this.props;
-
     return (
       <Block>
         <ScrollView
@@ -64,15 +66,6 @@ class Rooms extends React.Component {
             ))}
           </Block>
         </ScrollView>
-        <Block>
-          <Button
-            onPress={() =>
-              navigation.navigate("Pro", { facilities: ["coffee"] })
-            }
-          >
-            Discover
-          </Button>
-        </Block>
       </Block>
     );
   };

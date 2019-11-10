@@ -19,7 +19,7 @@ const SearchForm = ({ onSubmit, ...props }) => {
   const [facilities, setFacilities] = useState([]);
 
   const handleSubmit = (guests, facilities) => {
-    navigation.navigate("Elements", { guests, facilities });
+    navigation.navigate("Rooms", { guests, facilities });
   };
 
   const toggleFacility = (item, checked) => {
