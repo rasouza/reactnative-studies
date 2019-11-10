@@ -51,7 +51,7 @@ class Rooms extends React.Component {
     const facilities = navigation.getParam('facilities', [])
     const guests = navigation.getParam('guests', 99)
 
-    getFreeSlots(facilities, guests).then(slots => this.setState({ slots: formatSlots(slots) }));
+    getFreeSlots(facilities, guests).then(slots => this.setState({ slots: formatSlots(slots) })).catch(res => console.log(res));
   }
   renderSlots = () => {
     const { navigation } = this.props;

@@ -3,7 +3,7 @@ import { getARoom } from "./rooms";
 import get_free_slots from "./slots_handlers";
 import { getAccessToken } from "./oauth";
 
-export default getFreeSlots = (facilities, guests) => {
+export default getFreeSlots = async (facilities, guests) => {
   const rooms = getARoom(facilities, guests);
   const rooms_map = to_map(rooms);
   const data = {
@@ -17,7 +17,10 @@ export default getFreeSlots = (facilities, guests) => {
       };
     })
   };
-  const url = `https://www.googleapis.com/calendar/v3/freeBusy?alt=json&access_token=${getAccessToken()}`;
+  const token = await getAccessToken();
+  const url = `https://www.googleapis.com/calendar/v3/freeBusy?alt=json&access_token=${token}`;
+  console.log(url)
+  console.log(data)
   return axios.post(url, data).then(res => {
     const calendars = [];
     for (id in res.data.calendars) {
