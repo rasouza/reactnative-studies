@@ -51,9 +51,12 @@ const SearchForm = ({ onSubmit, ...props }) => {
 
       <Block row style={styles.block}>
         {initial_facilities.map(item => (
-          <View style={styles.checkboxContainer}>
+          <View 
+            key={item.toLowerCase()}
+            style={styles.checkboxContainer}
+          >
             <Checkbox
-              key={item.toLocaleLowerCase()}
+              key={item.toLowerCase()}
               value={item}
               label={item.toUpperCase()}
               checkboxStyle={styles.checkboxLabel}
@@ -64,11 +67,14 @@ const SearchForm = ({ onSubmit, ...props }) => {
       </Block>
 
       <Button
+        uppercase
+        shadowless
         regularSize
+        textWhite
         style={styles.ctaButton}
         onPress={() => handleSubmit(guests, facilities)}
       >
-        GET A ROOM!
+        Get a room!
       </Button>
     </Block>
   );
@@ -76,7 +82,7 @@ const SearchForm = ({ onSubmit, ...props }) => {
 
 const styles = StyleSheet.create({
   home: {
-    padding: 8,
+    padding: 5,
     paddingTop: 20
   },
   block: {
@@ -84,23 +90,17 @@ const styles = StyleSheet.create({
     flexWrap: 'wrap'
   },
   checkboxContainer: {
+    paddingLeft: 5,
     margin: theme.SIZES.BASE/4,
-    width: width/3
+    width: width/2.5
   },
   checkboxLabel: {
     color: '#FFF'
   },
-
   ctaButton: {
     marginTop: 20,
     borderRadius: 25,
-    padding: 20,
     backgroundColor: '#3DCBA1'
-  },
-
-  articles: {
-    width: width - theme.SIZES.BASE * 2,
-    paddingVertical: theme.SIZES.BASE
   }
 });
 
