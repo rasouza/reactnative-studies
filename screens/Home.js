@@ -12,11 +12,7 @@ class Home extends React.Component {
     return (
       <ScrollView
         showsVerticalScrollIndicator={false}
-        contentContainerStyle={styles.articles}
-      >
-        <Block flex>
-          <SearchForm onSubmit={item => item} onReset={item => item} />
-        </Block>
+        contentContainerStyle={styles.articles}>
       </ScrollView>
     );
   };
