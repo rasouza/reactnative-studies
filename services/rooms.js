@@ -34,11 +34,11 @@ export const book = (item, room) => {
   const url = `https://www.googleapis.com/calendar/v3/calendars/${calendarId}/events`;
   const data = {
     end: {
-      dateTime: item.end,
+      dateTime: item.endDateTime,
       timeZone: "America/Sao_Paulo"
     },
     start: {
-      dateTime: item.start,
+      dateTime: item.startDateTime,
       timeZone: "America/Sao_Paulo"
     },
     attendees: [{ email: room.calendar }],
@@ -55,7 +55,7 @@ export const book = (item, room) => {
     }
   };
 
-  console.log(options);
+  console.log(JSON.stringify(data));
 
   return axios(options)
     .then(response => console.log(response))

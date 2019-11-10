@@ -1,22 +1,21 @@
-import React from 'react';
-import Intl from 'intl';
-import locale from 'intl/locale-data/jsonp/pt';
-import { StyleSheet, Dimensions, ScrollView } from 'react-native';
-import { Block, theme, Button } from 'galio-framework';
+import React from "react";
+import Intl from "intl";
+import locale from "intl/locale-data/jsonp/pt";
+import { StyleSheet, Dimensions, ScrollView } from "react-native";
+import { Block, theme, Button } from "galio-framework";
 
+import { Card } from "../components";
+const { width } = Dimensions.get("screen");
 
-import { Card } from '../components';
-const { width } = Dimensions.get('screen');
-
-import { findByCalendar } from '../services/rooms';
-import slots from '../constants/slots';
+import { findByCalendar } from "../services/rooms";
+import slots from "../constants/slots";
 
 const formatOptions = {
-  hour: '2-digit',
-  minute: '2-digit',
-  second: '2-digit',
-  hourCycle: 'h24',
-  timeZoneName: 'short'
+  hour: "2-digit",
+  minute: "2-digit",
+  second: "2-digit",
+  hourCycle: "h24",
+  timeZoneName: "short"
 };
 
 const formatDateTime = dateTime =>
@@ -31,6 +30,9 @@ const formatedSlots = slots.map(slot => {
   const start = formatDateTime(slot.start);
   const end = formatDateTime(slot.end);
 
+  slot.startDateTime = slot.start;
+  slot.endDateTime = slot.end;
+
   slot.start = `${start.hour}:${start.minute}`;
   slot.end = `${end.hour}:${end.minute}`;
 
@@ -38,31 +40,32 @@ const formatedSlots = slots.map(slot => {
 });
 
 class Rooms extends React.Component {
-  
   renderSlots = () => {
     const { navigation } = this.props;
     return (
       <Block>
         <ScrollView
           showsVerticalScrollIndicator={false}
-          contentContainerStyle={styles.articles}>
+          contentContainerStyle={styles.articles}
+        >
           <Block flex>
-            
             {formatedSlots.map(slot => (
-              <Card 
-                key={slot.room}
-                item={slot}
-                horizontal
-              />
+              <Card key={slot.room} item={slot} horizontal />
             ))}
           </Block>
         </ScrollView>
         <Block>
-          <Button onPress={() => navigation.navigate('Pro', {facilities: ['coffee']})}>Discover</Button>
+          <Button
+            onPress={() =>
+              navigation.navigate("Pro", { facilities: ["coffee"] })
+            }
+          >
+            Discover
+          </Button>
         </Block>
       </Block>
-    )
-  }
+    );
+  };
 
   render() {
     return (
@@ -75,12 +78,12 @@ class Rooms extends React.Component {
 
 const styles = StyleSheet.create({
   home: {
-    width: width,
+    width: width
   },
   articles: {
     width: width - theme.SIZES.BASE * 2,
-    paddingVertical: theme.SIZES.BASE,
-  },
+    paddingVertical: theme.SIZES.BASE
+  }
 });
 
 export default Rooms;
