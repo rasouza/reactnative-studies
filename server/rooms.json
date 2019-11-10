@@ -2,7 +2,7 @@
    "rooms":[
       {
          "id":1,
-         "name":"SAO-10-Air",
+         "name":"Air",
          "floor":10,
          "guests":2,
          "facilities":[
@@ -13,7 +13,7 @@
       },
       {
          "id":2,
-         "name":"SAO-10-Mais",
+         "name":"Mais",
          "floor":10,
          "guests":5,
          "facilities":[
@@ -25,7 +25,7 @@
       },
       {
          "id":3,
-         "name":"SAO-10-Singapura",
+         "name":"Singapura",
          "floor":10,
          "guests":2,
          "facilities":[
@@ -36,7 +36,7 @@
       },
       {
          "id":4,
-         "name":"SAO-10-Super",
+         "name":"Super",
          "floor":10,
          "guests":3,
          "facilities":[
@@ -48,7 +48,7 @@
       },
       {
          "id":5,
-         "name":"SAO-10-Townhall",
+         "name":"Townhall",
          "floor":10,
          "guests":200,
          "facilities":[
@@ -60,7 +60,7 @@
       },
       {
          "id":6,
-         "name":"SAO-11-Estaiada",
+         "name":"Estaiada",
          "floor":11,
          "guests":2,
          "facilities":[
@@ -71,7 +71,7 @@
       },
       {
          "id":7,
-         "name":"SAO-11-Ipanema",
+         "name":"Ipanema",
          "floor":11,
          "guests":8,
          "facilities":[
@@ -85,7 +85,7 @@
       },
       {
          "id":8,
-         "name":"SAO-11-Masp",
+         "name":"Masp",
          "floor":11,
          "guests":36,
          "facilities":[
@@ -98,7 +98,7 @@
       },
       {
          "id":9,
-         "name":"SAO-5-Beetlejuice",
+         "name":"Beetlejuice",
          "floor":5,
          "guests":2,
          "facilities":[
@@ -110,7 +110,7 @@
       },
       {
          "id":10,
-         "name":"SAO-5-Fab Five",
+         "name":"Fab Five",
          "floor":5,
          "guests":8,
          "facilities":[
@@ -123,7 +123,7 @@
       },
       {
          "id":11,
-         "name":"SAO-5-Korra",
+         "name":"Korra",
          "floor":5,
          "guests":2,
          "facilities":[
@@ -133,7 +133,7 @@
       },
       {
          "id":12,
-         "name":"SAO-5-Luke Cage",
+         "name":"Luke Cage",
          "floor":5,
          "guests":20,
          "facilities":[
@@ -144,7 +144,7 @@
       },
       {
          "id":13,
-         "name":"SAO-5-Mulher Maravilha",
+         "name":"Mulher Maravilha",
          "floor":5,
          "guests":10,
          "facilities":[
@@ -159,7 +159,7 @@
       },
       {
          "id":14,
-         "name":"SAO-6-Copa-Chapadão",
+         "name":"Copa Chapadão",
          "floor":6,
          "guests":50,
          "facilities":[
@@ -171,7 +171,7 @@
       },
       {
          "id":15,
-         "name":"SAO-6-Early Night",
+         "name":"Early Night",
          "floor":6,
          "guests":4,
          "facilities":[
@@ -184,7 +184,7 @@
       },
       {
          "id":16,
-         "name":"SAO-6-Informal-Brain Over Muscle",
+         "name":"Informal Brain Over Muscle",
          "floor":6,
          "guests":15,
          "facilities":[
@@ -197,7 +197,7 @@
       },
       {
          "id":17,
-         "name":"SAO-6-Live Studio-OKRs",
+         "name":"Live Studio OKRs",
          "floor":6,
          "guests":2,
          "facilities":[
@@ -207,7 +207,7 @@
       },
       {
          "id":18,
-         "name":"SAO-6-People Care",
+         "name":"People Care",
          "floor":6,
          "guests":2,
          "facilities":[
@@ -220,7 +220,7 @@
       },
       {
          "id":19,
-         "name":"SAO-6-Product Love",
+         "name":"Product Love",
          "floor":6,
          "guests":10,
          "facilities":[
@@ -235,7 +235,7 @@
       },
       {
          "id":20,
-         "name":"SAO-8-Áustria",
+         "name":"Áustria",
          "floor":8,
          "guests":2,
          "facilities":[
@@ -247,7 +247,7 @@
       },
       {
          "id":21,
-         "name":"SAO-8-Canadá",
+         "name":"Canadá",
          "floor":8,
          "guests":2,
          "facilities":[
@@ -259,7 +259,7 @@
       },
       {
          "id":22,
-         "name":"SAO-8-Dinamarca",
+         "name":"Dinamarca",
          "floor":8,
          "guests":2,
          "facilities":[
@@ -269,7 +269,7 @@
       },
       {
          "id":23,
-         "name":"SAO-8-Espanha",
+         "name":"Espanha",
          "floor":8,
          "guests":4,
          "facilities":[
@@ -282,7 +282,7 @@
       },
       {
          "id":24,
-         "name":"SAO-8-Estônia",
+         "name":"Estônia",
          "floor":8,
          "guests":4,
          "facilities":[
@@ -295,7 +295,7 @@
       },
       {
          "id":25,
-         "name":"SAO-8-Finlândia",
+         "name":"Finlândia",
          "floor":8,
          "guests":2,
          "facilities":[
@@ -306,7 +306,7 @@
       },
       {
          "id":26,
-         "name":"SAO-8-Grécia 2",
+         "name":"Grécia 2",
          "floor":8,
          "guests":1,
          "facilities":[
@@ -316,7 +316,7 @@
       },
       {
          "id":27,
-         "name":"SAO-8-Grécia 3",
+         "name":"Grécia 3",
          "floor":8,
          "guests":1,
          "facilities":[
@@ -326,7 +326,7 @@
       },
       {
          "id":28,
-         "name":"SAO-8-Grécia 4",
+         "name":"Grécia 4",
          "floor":8,
          "guests":1,
          "facilities":[
@@ -336,7 +336,7 @@
       },
       {
          "id":29,
-         "name":"SAO-8-Grécia 5",
+         "name":"Grécia 5",
          "floor":8,
          "guests":1,
          "facilities":[
@@ -346,7 +346,7 @@
       },
       {
          "id":30,
-         "name":"SAO-8-Grécia 6",
+         "name":"Grécia 6",
          "floor":8,
          "guests":2,
          "facilities":[
@@ -356,7 +356,7 @@
       },
       {
          "id":31,
-         "name":"SAO-8-Grécia 7",
+         "name":"Grécia 7",
          "floor":8,
          "guests":2,
          "facilities":[
@@ -366,7 +366,7 @@
       },
       {
          "id":32,
-         "name":"SAO-8-Hungria",
+         "name":"Hungria",
          "floor":8,
          "guests":10,
          "facilities":[
@@ -381,7 +381,7 @@
       },
       {
          "id":33,
-         "name":"SAO-8-Itália",
+         "name":"Itália",
          "floor":8,
          "guests":4,
          "facilities":[
@@ -394,7 +394,7 @@
       },
       {
          "id":34,
-         "name":"SAO-9-Caverna do Dragão",
+         "name":"Caverna do Dragão",
          "floor":9,
          "guests":2,
          "facilities":[
@@ -405,7 +405,7 @@
       },
       {
          "id":35,
-         "name":"SAO-9-Hogwarts",
+         "name":"Hogwarts",
          "floor":9,
          "guests":10,
          "facilities":[
@@ -418,7 +418,7 @@
       },
       {
          "id":36,
-         "name":"SAO-9-Tardis",
+         "name":"Tardis",
          "floor":9,
          "guests":4,
          "facilities":[
@@ -431,7 +431,7 @@
       },
       {
          "id":37,
-         "name":"SAO-9-Tatooine",
+         "name":"Tatooine",
          "floor":9,
          "guests":4,
          "facilities":[
@@ -444,7 +444,7 @@
       },
       {
          "id":38,
-         "name":"SAO-10-Chip",
+         "name":"Chip",
          "floor":10,
          "guests":2,
          "facilities":[
@@ -455,7 +455,7 @@
       },
       {
          "id":39,
-         "name":"SAO-10-Lite",
+         "name":"Lite",
          "floor":10,
          "guests":14,
          "facilities":[
@@ -470,7 +470,7 @@
       },
       {
          "id":40,
-         "name":"SAO-10-Massage Room-SOAP",
+         "name":"Massage Room SOAP",
          "floor":10,
          "guests":2,
          "facilities":[
@@ -482,7 +482,7 @@
       },
       {
          "id":41,
-         "name":"SAO-10-Mood",
+         "name":"Mood",
          "floor":10,
          "guests":4,
          "facilities":[
@@ -495,7 +495,7 @@
       },
       {
          "id":42,
-         "name":"SAO-11-Cataratas",
+         "name":"Cataratas",
          "floor":11,
          "guests":2,
          "facilities":[
@@ -506,7 +506,7 @@
       },
       {
          "id":43,
-         "name":"SAO-11-Copacabana",
+         "name":"Copacabana",
          "floor":11,
          "guests":2,
          "facilities":[
@@ -517,7 +517,7 @@
       },
       {
          "id":44,
-         "name":"SAO-11-Ibirapuera",
+         "name":"Ibirapuera",
          "floor":11,
          "guests":2,
          "facilities":[
@@ -528,7 +528,7 @@
       },
       {
          "id":45,
-         "name":"SAO-11-Monte Roraima",
+         "name":"Monte Roraima",
          "floor":11,
          "guests":6,
          "facilities":[
@@ -538,7 +538,7 @@
       },
       {
          "id":46,
-         "name":"SAO-11-Noronha",
+         "name":"Noronha",
          "floor":11,
          "guests":2,
          "facilities":[
@@ -549,7 +549,7 @@
       },
       {
          "id":47,
-         "name":"SAO-11-Pantanal",
+         "name":"Pantanal",
          "floor":11,
          "guests":2,
          "facilities":[
@@ -560,7 +560,7 @@
       },
       {
          "id":48,
-         "name":"SAO-11-Pão de Açúcar",
+         "name":"Pão de Açúcar",
          "floor":11,
          "guests":6,
          "facilities":[
@@ -573,7 +573,7 @@
       },
       {
          "id":49,
-         "name":"SAO-5-Hermione Granger",
+         "name":"Hermione Granger",
          "floor":5,
          "guests":6,
          "facilities":[
@@ -586,7 +586,7 @@
       },
       {
          "id":50,
-         "name":"SAO-6-SOLO",
+         "name":"SOLO",
          "floor":6,
          "guests":4,
          "facilities":[
@@ -599,7 +599,7 @@
       },
       {
          "id":51,
-         "name":"SAO-8-Eslovênia",
+         "name":"Eslovênia",
          "floor":8,
          "guests":10,
          "facilities":[
@@ -614,7 +614,7 @@
       },
       {
          "id":52,
-         "name":"SAO-8-Team Room-França",
+         "name":"Team Room França",
          "floor":8,
          "guests":50,
          "facilities":[
@@ -627,7 +627,7 @@
       },
       {
          "id":53,
-         "name":"SAO-9-Millenium Falcon",
+         "name":"Millenium Falcon",
          "floor":9,
          "guests":2,
          "facilities":[
@@ -638,7 +638,7 @@
       },
       {
          "id":54,
-         "name":"SAO-9-Sala da Justiça",
+         "name":"Sala da Justiça",
          "floor":9,
          "guests":12,
          "facilities":[
@@ -651,7 +651,7 @@
       },
       {
          "id":55,
-         "name":"SAO-9-Valiria",
+         "name":"Valiria",
          "floor":9,
          "guests":4,
          "facilities":[
