@@ -35,7 +35,7 @@ class Card extends React.Component {
         <TouchableWithoutFeedback onPress={() => console.log(room)}>
           <Block flex space="between" style={styles.cardDescription}>
             <Text size={14} style={styles.cardTitle}>
-              {item.start}:{item.end}
+              {item.start} - {item.end}
             </Text>
             <Text size={14} style={styles.cardTitle}>
               {room.name}
