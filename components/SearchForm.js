@@ -41,16 +41,14 @@ const SearchForm = ({ onSubmit, ...props }) => {
       />
 
       <Text>Choose the facilities you need:</Text>
-
-      {initial_facilities.map(item => (
-        <Checkbox
-          key={item}
-          value={item}
-          label={item.toUpperCase()}
-          onChange={checked => toggleFacility(item, checked)}
-        />
-      ))}
-
+        {initial_facilities.map(item => (
+          <Checkbox
+            key={item}
+            value={item}
+            label={item.toUpperCase()}
+            onChange={checked => toggleFacility(item, checked)}
+          />
+        ))}
       {/* <Button
         onPress={() => handleSubmit(guests, facilities)}
         title="Get a room"
