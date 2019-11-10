@@ -4,6 +4,7 @@ import DrawerItem from './DrawerItem';
 import Icon from './Icon';
 import Header from './Header';
 import Input from './Input';
+import SearchForm from './SearchForm';
 import Switch from './Switch';
 import Select from './Select';
 
@@ -13,6 +14,7 @@ export {
   DrawerItem,
   Icon,
   Input,
+  SearchForm,
   Header,
   Switch, 
   Select

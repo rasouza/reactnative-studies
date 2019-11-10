@@ -1,29 +1,38 @@
-import React from 'react';
-import { StyleSheet, Dimensions, ScrollView } from 'react-native';
-import { Block, theme } from 'galio-framework';
+import React from "react";
+import { StyleSheet, Dimensions, ScrollView } from "react-native";
+import { Block, theme } from "galio-framework";
 
-import { Card } from '../components';
-import articles from '../constants/articles';
-const { width } = Dimensions.get('screen');
+import { Card, SearchForm } from "../components";
+const { width } = Dimensions.get("screen");
 
-import getARoom from '../services/rooms';
-
-
+import getARoom from "../services/rooms";
 
 class Home extends React.Component {
   renderArticles = () => {
     return (
       <ScrollView
         showsVerticalScrollIndicator={false}
-        contentContainerStyle={styles.articles}>
+        contentContainerStyle={styles.articles}
+      >
+        <Block flex>
+          <SearchForm onSubmit={item => item} onReset={item => item} />
+        </Block>
       </ScrollView>
-    )
-  }
+    );
+  };
 
   render() {
+    const { navigation } = this.props;
     return (
       <Block flex center style={styles.home}>
-        {this.renderArticles()}
+        <ScrollView
+          showsVerticalScrollIndicator={false}
+          contentContainerStyle={styles.articles}
+        >
+          <Block flex>
+            <SearchForm navigation={navigation} />
+          </Block>
+        </ScrollView>
       </Block>
     );
   }
@@ -31,12 +40,12 @@ class Home extends React.Component {
 
 const styles = StyleSheet.create({
   home: {
-    width: width,    
+    width: width
   },
   articles: {
     width: width - theme.SIZES.BASE * 2,
-    paddingVertical: theme.SIZES.BASE,
-  },
+    paddingVertical: theme.SIZES.BASE
+  }
 });
 
 export default Home;
