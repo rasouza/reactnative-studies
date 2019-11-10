@@ -11,7 +11,7 @@ export function to_datetime(time) {
     return datetime
         .withHour(hour)
         .withMinute(minute)
-        .withSecond(0)
+        .withSecond(1)
         .withNano(0)
         .withFixedOffsetZone()
         .toString()

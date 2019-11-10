@@ -17,9 +17,7 @@ export default getFreeSlots = (facilities, guests) => {
       };
     })
   };
-  const accessToken =
-    "ya29.ImOwB9vcGYY35svc4cOVlhUKp07CwFGCclbCxHkA2t80CcKe7f_1U3bG9ncD_IZnSzEgzGFFcmJPtuhDpajtS3I1_dbCGkl5HMYouAB5VUMhRDzwthHDLZKuVU_BU_fct-ZlJSA";
-  const url = `https://www.googleapis.com/calendar/v3/freeBusy?alt=json&access_token=${accessToken}`;
+  const url = `https://www.googleapis.com/calendar/v3/freeBusy?alt=json&access_token=${getAccessToken()}`;
   return axios.post(url, data).then(res => {
     const calendars = [];
     for (id in res.data.calendars) {

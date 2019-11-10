@@ -1,7 +1,7 @@
 import { intersection, filter, sortBy, compose } from "lodash/fp";
 import { rooms } from "../server/rooms.json";
 import axios from "axios";
-import { getAccessToken } from "./oauth.js";
+import { getAccessToken, getCalendarId } from "./oauth.js";
 
 const filterByFacilities = facilities => {
   return rooms =>
@@ -29,9 +29,8 @@ export const findByCalendar = calendar =>
   filter(room => room.calendar == calendar, rooms)[0];
 
 export const book = (item, room) => {
-  const calendarId = "danilo.lima@sumup.com";
   const accessToken = getAccessToken();
-  const url = `https://www.googleapis.com/calendar/v3/calendars/${calendarId}/events`;
+  const url = `https://www.googleapis.com/calendar/v3/calendars/${getCalendarId()}/events`;
   const data = {
     end: {
       dateTime: item.endDateTime,
