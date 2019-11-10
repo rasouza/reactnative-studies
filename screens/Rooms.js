@@ -2,7 +2,7 @@ import React from "react";
 import Intl from "intl";
 import locale from "intl/locale-data/jsonp/pt";
 import { StyleSheet, Dimensions, ScrollView } from "react-native";
-import { Block, theme, Button } from "galio-framework";
+import { Block, theme, Text, Button } from "galio-framework";
 
 import { Card } from "../components";
 const { width } = Dimensions.get("screen");
@@ -56,6 +56,9 @@ class Rooms extends React.Component {
   renderSlots = () => {
     return (
       <Block>
+        <Text size={22} style={styles.cardTitle}>
+          Search results
+        </Text>
         <ScrollView
           showsVerticalScrollIndicator={false}
           contentContainerStyle={styles.articles}

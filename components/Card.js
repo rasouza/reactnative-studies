@@ -42,27 +42,29 @@ class Card extends React.Component {
       <Block row={horizontal} card flex style={cardContainer}>
         <TouchableWithoutFeedback onPress={() => book(item, room)}>
           <Block flex style={imgContainer}>
-            <Image source={{ uri: item.image }} style={imageStyles} />
+            <Image source={{ uri: "https://officesnapshots.com/wp-content/uploads/2019/01/sum-up-offices-sao-paulo-18-700x467.jpg" }} style={imageStyles} />
+          </Block>
+        </TouchableWithoutFeedback>
+        <TouchableWithoutFeedback onPress={() => book(item, room)}>
+          <Block flex space="between" style={styles.cardDescription}>
+            <Text size={18} style={styles.cardTitle}>
+              {item.start}
+            </Text>
+            <Text size={18} style={styles.cardTitle}>
+              {item.end}
+            </Text>
           </Block>
         </TouchableWithoutFeedback>
         <TouchableWithoutFeedback onPress={() => book(item, room)}>
           <Block flex space="between" style={styles.cardDescription}>
             <Text size={14} style={styles.cardTitle}>
-              {item.start} - {item.end}
-            </Text>
-            <Text size={14} style={styles.cardTitle}>
               {room.name}
             </Text>
             <Text size={14} style={styles.cardTitle}>
-              {room.guests}
+              SAO-{room.floor}
             </Text>
-            <Text
-              size={12}
-              muted={!ctaColor}
-              color={ctaColor || argonTheme.COLORS.ACTIVE}
-              bold
-            >
-              {item.cta}
+            <Text size={14} style={styles.cardTitle}>
+              {room.guests} pessoas
             </Text>
           </Block>
         </TouchableWithoutFeedback>

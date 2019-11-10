@@ -22,6 +22,6 @@ export const SignInWithGoogleAsync = async () => {
 };
 
 export const getAccessToken = () =>
-         "ya29.ImSwB-JlBuE2jVv_8Fobo2eNUKjh6i4E7UKPXP4FtEct4J-PzaboLghd85MmW9PhpldXdIEAp83ky_8_ifetrSBU0DFoJHY7f9QWU98ct3CbhzfCMv3mXRFz7Ujk1rAbW-HsufF8";
+         "ya29.ImSwBzRw0SwRmct-kuiiY_4uVf6He5gLBef0fKKAmvSopiYH-6e2OjTWQI_3CjHM_Nlgpu6ZrVrpPYifIDAK1hVce3g82FwzsjoD8UFDnhzzeM1tIBAjo64HMFDdLB459dnERXrf";
 
 export const getCalendarId = () => "ismael.guimaraes@sumup.com"
