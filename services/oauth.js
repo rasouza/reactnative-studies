@@ -12,10 +12,11 @@ export const SignInWithGoogleAsync = async () => {
     });
 
     if (result.type === "success") {
-      console.log(result.accessToken);
+      console.log(result);
       await AsyncStorage.setItem("@RoomBooker:accessToken", result.accessToken);
       await AsyncStorage.setItem("@RoomBooker:refreshToken", result.refreshToken);
       await AsyncStorage.setItem("@RoomBooker:calendarId", result.user.email);
+      await AsyncStorage.setItem("@RoomBooker:name", result.user.name);
       return result.accessToken;
     } else {
       return { cancelled: true };
@@ -31,6 +32,9 @@ export const getAccessToken = async () => {
 }
 
 export const getCalendarId = async () =>{ 
-  await console.log(AsyncStorage.getItem("@RoomBooker:calendarId"));
   return await AsyncStorage.getItem("@RoomBooker:calendarId")
+}
+
+export const getName = async () =>{ 
+  return await AsyncStorage.getItem("@RoomBooker:name")
 }
