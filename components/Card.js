@@ -24,7 +24,6 @@ class Card extends React.Component {
     ];
 
     const room = findByCalendar(item.room)
-    console.log(item)
 
     return (
       <Block row={horizontal} card flex style={cardContainer}>
@@ -37,6 +36,12 @@ class Card extends React.Component {
           <Block flex space="between" style={styles.cardDescription}>
             <Text size={14} style={styles.cardTitle}>
               {item.start}:{item.end}
+            </Text>
+            <Text size={14} style={styles.cardTitle}>
+              {room.name}
+            </Text>
+            <Text size={14} style={styles.cardTitle}>
+              {room.guests}
             </Text>
             <Text
               size={12}
