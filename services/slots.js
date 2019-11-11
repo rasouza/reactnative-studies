@@ -2,14 +2,24 @@ import axios from "axios";
 import { getARoom } from "./rooms";
 import get_free_slots from "./slots_handlers";
 import { getAccessToken } from "./oauth";
+import { ZonedDateTime } from "@js-joda/core"
 
 export default getFreeSlots = async (facilities, guests) => {
   const rooms = getARoom(facilities, guests);
   const rooms_map = to_map(rooms);
+    const now = ZonedDateTime.now()
+        .withNano(0)
+        .withFixedOffsetZone()
+  const endOfDay = now
+      .withHour(23)
+      .withMinute(59)
+      .withSecond(59)
+    console.log("HUEEEEEEEEEE " + now)
+    console.log("HUEEEEEEEEEE2 " + endOfDay)
   const data = {
     // LOL
-    timeMin: "2019-11-10T00:00:00-03:00",
-    timeMax: "2019-11-10T23:59:59-03:00",
+    timeMin: now.toString(),
+    timeMax: endOfDay.toString(),
     timeZone: "America/Sao_Paulo",
     items: rooms.map(room => {
       return {
