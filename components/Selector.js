@@ -4,10 +4,10 @@ import { theme } from 'galio-framework';
 
 const styles = StyleSheet.create({
   base: {
-    margin: theme.SIZES.BASE / 4,
-    width: 100,
-    height: 100,
-    padding: 23,
+    margin: theme.SIZES.BASE / 3,
+    width: 60,
+    height: 60,
+    padding: 15,
     borderWidth: 2,
     borderRadius: 50
   },

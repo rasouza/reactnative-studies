@@ -83,7 +83,7 @@ const SearchForm = ({ onSubmit, ...props }) => {
   );
 };
 
-const ICON_SIZE = 50;
+const ICON_SIZE = 30;
 
 const styles = StyleSheet.create({
   home: {
